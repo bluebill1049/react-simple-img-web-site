@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import colors from '../styled/colors'
 import TopMenuGroup from './topMenuGroup'
 import { H1, H2 } from '../styled/typography'
+import { Animate } from 'react-simple-animate'
 
 const HeaderWrapper = styled.div`
   background: ${colors.primary};
@@ -19,21 +20,45 @@ const HeaderWrapper = styled.div`
 `
 
 const Logo = styled.div`
-  & img {
-    width: 120px;
-    height: 120px;
-    transform-origin: 50% 50%;
-    margin-bottom: 0;
+  width: 180px;
+  height: 180px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
 
-    @media (min-width: 768px) {
-      width: 200px;
-      height: 200px;
-    }
-  }
+const LogoMask = styled.div`
+  width: 165px;
+  height: 165px;
+  background: white;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+`
 
-  & svg {
-    fill: white;
-  }
+const Triangle = styled.span`
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  position: absolute;
+  border-bottom: 91px solid black;
+  top: 75px;
+  left: 1px;
+`
+
+const Triangle2 = styled.span`
+  width: 0;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  position: absolute;
+  border-bottom: 120px solid black;
+  top: 55px;
+  left: 55px;
 `
 
 const Heading = styled.div`
@@ -58,13 +83,34 @@ function Header() {
       <TopMenuGroup />
 
       <Logo>
-        <svg width={200} height={150} viewBox="0 0 100 100">
-          <g>
-            <path d="M50,5C25.2,5,5,25.1,5,50s20.2,45,45,45s45-20.1,45-45S74.8,5,50,5z M50,89.4c-7.2,0-14-2-19.8-5.4l19.6-34l19.7,34.2
-            C63.7,87.5,57.1,89.4,50,89.4z M66.6,44.1c-4.6,0-8.4-3.7-8.4-8.4c0-4.6,3.7-8.4,8.4-8.4c4.7,0,8.5,3.7,8.4,8.4
-            C75,40.3,71.3,44.1,66.6,44.1z" />
-          </g>
-        </svg>
+        <LogoMask>
+          <Animate
+            play
+            delaySeconds={0.1}
+            easeType="ease-in"
+            startStyle={{
+              opacity: 0,
+            }}
+            endStyle={{
+              opacity: 1,
+            }}
+          >
+            <Triangle />
+          </Animate>
+          <Animate
+            play
+            delaySeconds={0.2}
+            easeType="ease-in"
+            startStyle={{
+              opacity: 0,
+            }}
+            endStyle={{
+              opacity: 1,
+            }}
+          >
+            <Triangle2 />
+          </Animate>
+        </LogoMask>
       </Logo>
 
       <Heading>
