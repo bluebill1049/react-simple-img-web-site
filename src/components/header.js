@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import colors from '../styled/colors'
 import TopMenuGroup from './topMenuGroup'
 import { H1, H2 } from '../styled/typography'
-import { Animate } from 'react-simple-animate'
 
 const HeaderWrapper = styled.div`
   background: ${colors.primary};
@@ -84,32 +83,8 @@ function Header() {
 
       <Logo>
         <LogoMask>
-          <Animate
-            play
-            delaySeconds={0.1}
-            easeType="ease-in"
-            startStyle={{
-              opacity: 0,
-            }}
-            endStyle={{
-              opacity: 1,
-            }}
-          >
-            <Triangle />
-          </Animate>
-          <Animate
-            play
-            delaySeconds={0.2}
-            easeType="ease-in"
-            startStyle={{
-              opacity: 0,
-            }}
-            endStyle={{
-              opacity: 1,
-            }}
-          >
-            <Triangle2 />
-          </Animate>
+          <Triangle />
+          <Triangle2 />
         </LogoMask>
       </Logo>
 

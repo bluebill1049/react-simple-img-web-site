@@ -28,7 +28,7 @@ const IndexPage = ({ location }) => (
           alt="whatever"
           key={i}
           placeholder="black"
-          animationDuration={1}
+          animationDuration={5}
           src={`https://source.unsplash.com/collection/${Math.floor(Math.random() * (100 - 0 + 1)) + 0}/800x400`}
           applyAspectRatio
           width={800}
