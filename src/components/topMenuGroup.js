@@ -97,7 +97,7 @@ export default class TopMenuGroup extends React.PureComponent {
                   </Menu>
                 )}
               />
-              <a rel="noopener noreferrer" href="https://github.com/bluebill1049/react-simple-animate" target="_blank">
+              <a rel="noopener noreferrer" href="https://github.com/bluebill1049/react-simple-img" target="_blank">
                 <GitHub>
                   <svg viewBox="0 0 496 512" height="30" aria-hidden="true" focusable="false" fill="currentColor">
                     <path
@@ -108,7 +108,7 @@ export default class TopMenuGroup extends React.PureComponent {
                 </GitHub>
               </a>
               <a
-                href="https://medium.com/jsdownunder/react-ui-animation-made-simple-c2ff98056659"
+                href="https://medium.com/jsdownunder/optimising-web-page-a-simple-step-66f7f4ba417c"
                 rel="noopener noreferrer"
                 target="_blank"
               >

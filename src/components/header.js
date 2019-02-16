@@ -1,11 +1,8 @@
 import React from 'react'
-import { AnimateKeyframes } from 'react-simple-animate'
 import styled from 'styled-components'
-import logo from '../images/logo.svg'
 import colors from '../styled/colors'
 import TopMenuGroup from './topMenuGroup'
 import { H1, H2 } from '../styled/typography'
-import Nav from './nav'
 
 const HeaderWrapper = styled.div`
   background: ${colors.primary};
@@ -33,6 +30,10 @@ const Logo = styled.div`
       height: 200px;
     }
   }
+
+  & svg {
+    fill: white;
+  }
 `
 
 const Heading = styled.div`
@@ -51,32 +52,28 @@ const Code = styled.span`
   align-content: unset;
 `
 
-function Header(props) {
+function Header() {
   return (
     <HeaderWrapper>
-      <Nav location={props.location} />
-
       <TopMenuGroup />
 
       <Logo>
-        <AnimateKeyframes
-          play
-          durationSeconds={10}
-          direaction="alternate"
-          iterationCount="infinite"
-          keyframes={['transform: rotateZ(359deg)', 'transform: rotateZ(0deg)']}
-        >
-          <img src={logo} alt="logo" />
-        </AnimateKeyframes>
+        <svg width={200} height={150} viewBox="0 0 100 100">
+          <g>
+            <path d="M50,5C25.2,5,5,25.1,5,50s20.2,45,45,45s45-20.1,45-45S74.8,5,50,5z M50,89.4c-7.2,0-14-2-19.8-5.4l19.6-34l19.7,34.2
+            C63.7,87.5,57.1,89.4,50,89.4z M66.6,44.1c-4.6,0-8.4-3.7-8.4-8.4c0-4.6,3.7-8.4,8.4-8.4c4.7,0,8.5,3.7,8.4,8.4
+            C75,40.3,71.3,44.1,66.6,44.1z" />
+          </g>
+        </svg>
       </Logo>
 
       <Heading>
-        <H1>React Simple Animate</H1>
-        <H2>UI Animation Made Simple</H2>
+        <H1>React Simple Img</H1>
+        <H2>Elegant lazy load images</H2>
       </Heading>
 
       <Code>
-        <code>npm install --S react-simple-animate</code>
+        <code>npm install --S react-simple-img</code>
       </Code>
     </HeaderWrapper>
   )

@@ -6,7 +6,7 @@ import logo from '../images/logo.svg'
 const Root = styled.div`
   padding: 20px;
   color: ${colors.white};
-  background: ${colors.secondary};
+  background: ${colors.black};
   font-size: 14px;
 
   & > a {
@@ -33,7 +33,7 @@ export default function Footer() {
         ❤️
       </span>
       ️&nbsp;by <a href="https://twitter.com/bluebill1049">@Bill Luo</a> & <img src={logo} alt="logo" />{' '}
-      {`<React Simple Animate />`}
+      {`<React Simple Img />`}
     </Root>
   )
 }
