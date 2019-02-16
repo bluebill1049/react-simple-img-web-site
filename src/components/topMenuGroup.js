@@ -14,17 +14,6 @@ const Medium = styled.span`
   right: 20px;
 `
 
-const Menu = styled.span`
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  cursor: pointer;
-
-  @media (min-width: 1024px) {
-    display: none !important;
-  }
-`
-
 export default function TopMenuGroup() {
   return (
     <>
